@@ -7,6 +7,7 @@
 ### Starting the application
 
 > npm install
+
 > npm start
 
 ### Running tests
