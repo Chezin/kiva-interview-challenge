@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container } from '@mui/material';
+import Loan from './components/Loan';
+import TitleBar from './components/TitleBar';
+import bundle from './bundles/bundle'
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <Box>
+          <TitleBar
+            title={bundle.LOAN_ARTS_PAGE_TITLE}
+            description={bundle.LOAN_ARTS_PAGE_DESCRIPTION}
+          />
+        </Box>
+      </Container>
+      <Box
+        display="flex"
+        alignItems="center"
+        sx={{ flexGrow: 1 }}
+        justifyContent="center"
+      >
+        <Loan />
+      </Box>
     </div>
   );
 }
